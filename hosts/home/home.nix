@@ -58,7 +58,6 @@
         nvim-notes
         podman
         repomix
-        rmpc
         uwsm
         waybar
         xremap

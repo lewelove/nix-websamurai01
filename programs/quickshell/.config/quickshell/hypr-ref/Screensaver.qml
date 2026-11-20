@@ -5,17 +5,6 @@ import QtQuick
 import "root:/"
 
 Scope {
-    property string wallpaperPath: ""
-
-    Process {
-        id: getWall
-        command: ["sh", "-c", "swww query | awk -F 'image: ' '/image:/{print $2; exit}'"]
-        stdout: StdioCollector {
-            id: wallOutput
-            onStreamFinished: wallpaperPath = wallOutput.text.trim()
-        }
-    }
-
     Variants {
         model: Quickshell.screens
 
@@ -51,12 +40,6 @@ Scope {
                     color: "black"
                 }
 
-                Image {
-                    anchors.fill: parent
-                    source: wallpaperPath ? "file://" + wallpaperPath : ""
-                    fillMode: Image.PreserveAspectCrop
-                }
-
                 Keys.onPressed: (event) => exitLogic.trigger()
             }
 
@@ -83,7 +66,6 @@ Scope {
             IpcHandler {
                 target: "screensaver"
                 function activate(): void {
-                    getWall.running = true;
                     screensaverWindow.visible = true;
                     container.opacity = 1;
                     container.forceActiveFocus();
