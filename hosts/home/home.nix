@@ -42,7 +42,7 @@
         v2raya
         direnv
         quickshell
-        swww
+        awww
         polkit-agent
 
         alacritty

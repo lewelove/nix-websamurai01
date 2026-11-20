@@ -1,10 +1,10 @@
 { ... }:
 
 {
-  flake.nixosModules.swww =
+  flake.nixosModules.awww =
     { pkgs, ... }:
     {
-      hm.systemd.user.services.swww = {
+      hm.systemd.user.services.awww = {
         Unit = {
           Description = "Wayland Wallpaper Daemon";
           PartOf = [ "graphical-session.target" ];
