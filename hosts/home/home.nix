@@ -40,7 +40,6 @@
         thunar
         v2raya
         direnv
-        quickshell
         awww
         polkit-agent
 
