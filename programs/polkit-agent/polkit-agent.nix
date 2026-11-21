@@ -4,6 +4,8 @@
   flake.nixosModules.polkit-agent =
     { pkgs, ... }:
     {
+      environment.systemPackages = [ pkgs.polkit_gnome ];
+
       hm.systemd.user.services.polkit-gnome-authentication-agent-1 = {
         Unit = {
           Description = "polkit-gnome-authentication-agent-1";

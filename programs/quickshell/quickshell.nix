@@ -4,6 +4,8 @@
   flake.nixosModules.quickshell =
     { pkgs, ... }:
     {
+      environment.systemPackages = [ pkgs.quickshell ];
+
       hm.link.".config/quickshell" = ./.config/quickshell;
 
       hm.systemd.user.services.quickshell = {

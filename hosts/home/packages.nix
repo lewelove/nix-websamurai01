@@ -8,7 +8,6 @@
     jdk21
     android-studio
     unrar
-    polkit_gnome
     curl
     git
     wget
@@ -46,12 +45,7 @@
     discord
 
     # Desktop
-    fuzzel
-    quickshell
-    mako
     libnotify
-    awww
-    xremap
     slurp
     grim
     wlsunset
@@ -64,12 +58,7 @@
 
     # Terminal Programs
     fastfetch
-    alacritty
-    waybar
     micro
-    foot
-    kitty
-    neovim
     btop
     yazi
     ripdrag
@@ -80,9 +69,6 @@
     runc
     crun
 
-    # CLI Programs
-    repomix
-
     # Rust Utils
     ripgrep
     bat
@@ -90,8 +76,6 @@
     fzf
 
     # Media
-    mpv
-    imv
     qbittorrent
 
     # Network

@@ -4,6 +4,8 @@
   flake.nixosModules.awww =
     { pkgs, ... }:
     {
+      environment.systemPackages = [ pkgs.awww ];
+
       hm.systemd.user.services.awww = {
         Unit = {
           Description = "Wayland Wallpaper Daemon";
