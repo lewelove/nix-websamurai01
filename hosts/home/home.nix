@@ -27,7 +27,6 @@
         folders
         theme
         audio
-        nvidia
         bluetooth
         games
 
