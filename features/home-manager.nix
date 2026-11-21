@@ -22,6 +22,7 @@
         config.home.file = lib.mapAttrs' (destination: sourcePath:
           lib.nameValuePair destination {
             source = config.lib.file.mkOutOfStoreSymlink (resolve sourcePath);
+            force = true;
           }
         ) config.link;
       };
@@ -37,6 +38,7 @@
       config = {
         home-manager = {
           backupFileExtension = "backup";
+          overwriteBackup = true;
           extraSpecialArgs = { inherit inputs id; };
           users.${id.user} = {
             home.stateVersion = "25.05";
